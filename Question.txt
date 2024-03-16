@@ -1,0 +1,17 @@
+You have been tasked with developing an advanced banking application in Python. The application should allow users to perform various banking operations such as account creation, deposit, withdrawal, balance inquiry, and account closure. Additionally, the application should support storing account information in a file for persistence.
+
+Implement the following functionalities:
+
+    1. Account Creation: Write a Python program that allows users to create a new bank account. The program should prompt the user to enter their name and initial deposit amount. Each account should have a unique account number generated automatically.
+
+    2. Deposit: Write a function deposit that allows users to deposit money into their bank account. The function should prompt the user to enter their account number and the amount to be deposited. Update the account balance accordingly.
+
+    3. Withdrawal: Write a function withdraw that allows users to withdraw money from their bank account. The function should prompt the user to enter their account number and the amount to be withdrawn. Ensure that the withdrawal amount does not exceed the available balance.
+
+    4. Balance Inquiry: Write a function balanceInquiry that allows users to check their account balance. The function should prompt the user to enter their account number and display their current balance.
+
+    5. Account Closure: Write a function closeAccount that allows users to close their bank account. The function should prompt the user to enter their account number and remove the account from the system.
+
+    6. File Input/Output: Implement file input/output functionality to store account information persistently. When the program starts, it should load existing account information from a file if available. When the program exits, it should save the updated account information to the file.
+
+Ensure that all function names follow the camelCase convention and handle potential errors gracefully, such as incorrect account numbers, insufficient funds for withdrawal, and invalid input.
