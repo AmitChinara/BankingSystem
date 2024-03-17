@@ -1,5 +1,5 @@
 import ExceptionClass as exp
-
+from HelperClass import Helper
 
 class Main:
 
@@ -8,9 +8,10 @@ class Main:
 
     def main(self):
         running = True
+        helper = Helper()
         while running:
             try:
-                self.displayMenu()
+                helper.displayMenu()
                 choice = input("Enter your choice: ")
                 if choice == '1':
                     pass

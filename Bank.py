@@ -4,8 +4,10 @@ import random
 class Bank:
 
     def __init__(self):
-        pass
+        self.customerInfo =
 
-    # Generates a six-digit account number.
+    def loadData(self):
+        pass
+        # Generates a six-digit account number.
     def generateAccountNumber(self):
         return str(random.randint(100000, 999999))
