@@ -30,16 +30,6 @@ class Main:
             except exp.InvalidChoiceException as e:
                 print(f"No action performed due to exception: {e}")
 
-    def displayMenu(self):
-        print("+---------------WELCOME TO SONAL BANK-------------------+")
-        print("|                1. Account Creation                    |")
-        print("|                2. Deposit                             |")
-        print("|                3. Withdrawal                          |")
-        print("|                4. Balance Inquiry                     |")
-        print("|                5. Close Account                       |")
-        print("|                6. Exit Application                    |")
-        print("+-------------------------------------------------------+")
-
 
 if __name__ == '__main__':
     main = Main()
