@@ -12,3 +12,10 @@ class Helper:
         print("||                   5. Close Account                          ||")
         print("||                   6. Exit Application                       ||")
         print("++-------------------------------------------------------------++")
+
+    def displayDetails(self, account_number, name, balance):
+        print("+=================================================+")
+        print(f"Account Number: {account_number}")
+        print(f"Account Holder Name: {name}")
+        print(f"Available Balance: ${balance:.2f}")
+        print("+=================================================+")

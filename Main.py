@@ -1,5 +1,6 @@
 import ExceptionClass as exp
 from HelperClass import Helper
+from Bank import Bank
 
 class Main:
 
@@ -9,18 +10,23 @@ class Main:
     def main(self):
         running = True
         helper = Helper()
+        bank_obj = Bank()
+        bank_obj.loadData()
+
         while running:
             try:
                 helper.displayMenu()
                 choice = input("Enter your choice: ")
                 if choice == '1':
-                    pass
+                    account_number = bank_obj.accountCreation()
+                    if account_number is not None:
+                        print(f"Successfully created the account. Account Number: {account_number}")
                 elif choice == '2':
                     pass
                 elif choice == '3':
                     pass
                 elif choice == '4':
-                    pass
+                    bank_obj.balanceInquiry()
                 elif choice == '5':
                     pass
                 elif choice == '6':
@@ -30,6 +36,10 @@ class Main:
                     raise exp.InvalidChoiceException(choice)
             except exp.InvalidChoiceException as e:
                 print(f"No action performed due to exception: {e}")
+            except ValueError as e:
+                print(f"Invalid number provided: {e}")
+            except exp.AccountNumberNotFoundException as e:
+                print(f"ERROR: {e}")
 
 
 if __name__ == '__main__':
