@@ -4,7 +4,7 @@ import random
 class Bank:
 
     def __init__(self):
-        self.customerInfo =
+        self.customerInfo = ''
 
     def loadData(self):
         pass
