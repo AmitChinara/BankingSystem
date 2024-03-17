@@ -27,10 +27,11 @@ class Bank:
             name = input("Enter your name: ").upper()
             balance = float(input("Enter your balance: $"))
             self.data[account_number] = [name, balance]
-
             return account_number
+
         elif choice == 'NO':
             print("Your account hasn't been created.")
+
         else:
             raise exp.InvalidChoiceException(choice)
 
