@@ -8,7 +8,7 @@ from HelperClass import Helper
 class Bank:
 
     def __init__(self):
-        self.customer_info_filename = 'Data/customerinfo.txt'
+        self.customer_info_filename = 'Data/customer.txt'
         self.data = {}
         self.helper = Helper()
 
