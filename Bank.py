@@ -8,6 +8,7 @@ class Bank:
 
     def loadData(self):
         pass
-        # Generates a six-digit account number.
+
+    # Generates a six-digit account number.
     def generateAccountNumber(self):
         return str(random.randint(100000, 999999))
