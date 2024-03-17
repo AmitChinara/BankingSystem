@@ -4,7 +4,7 @@ import random
 class Bank:
 
     def __init__(self):
-        self.customerInfo = ''
+        self.customer_info_filename = None
 
     def loadData(self):
         pass
