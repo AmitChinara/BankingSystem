@@ -1,7 +1,7 @@
 import ExceptionClass as exp
 
 
-class Main():
+class Main:
 
     def __init__(self):
         pass
