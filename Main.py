@@ -28,7 +28,7 @@ class Main():
                 else:
                     raise exp.InvalidChoiceException(choice)
             except exp.InvalidChoiceException as e:
-                print(f"No action performed due to exception {e}")
+                print(f"No action performed due to exception: {e}")
 
     def displayMenu(self):
         print("+---------------WELCOME TO SONAL BANK-------------------+")
