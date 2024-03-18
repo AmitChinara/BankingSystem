@@ -16,8 +16,9 @@ class Main:
 
         while running:
             try:
-                helper.displayMenu()
-                choice = input("Enter your choice: ")
+                choice = input("Enter your choice: ('0' to display options) ")
+                if choice == '0':
+                    helper.displayMenu()
                 if choice == '1':
                     account_number = bank_obj.accountCreation()
                     if account_number is not None:

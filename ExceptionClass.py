@@ -10,4 +10,4 @@ class NoAvailableAccountNumberException(Exception):
 
 class AccountNumberNotFoundException(Exception):
     def __init__(self, account_number):
-        super().__init__(f'The account number: {account_number} is not valid')
+        super().__init__(f'The account number: {account_number} is not available in the database.')
