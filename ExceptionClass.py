@@ -1,6 +1,6 @@
 class InvalidChoiceException(Exception):
     def __init__(self, choice):
-        super().__init__(f'"{choice}" is a invalid choice.')
+        super().__init__(f'"{choice}" is an invalid choice.')
 
 
 class NoAvailableAccountNumberException(Exception):
