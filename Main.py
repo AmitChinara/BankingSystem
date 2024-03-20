@@ -9,11 +9,10 @@ class Main:
         pass
 
     def main(self):
-        running = True
         helper = Helper()
         bank_obj = Bank()
 
-        while running:
+        while True:
             try:
                 choice = input("Enter your choice: ('0' to display options) ")
                 if choice == '0':
@@ -33,7 +32,7 @@ class Main:
                 elif choice == '5':
                     pass
                 elif choice == '6':
-                    running = False
+                    raise KeyboardInterrupt
                 else:
                     raise exp.InvalidChoiceException(choice)
             except exp.InvalidChoiceException as e:
@@ -44,8 +43,6 @@ class Main:
                 print(f"ERROR: {e}")
             except exp.InvalidAmountException as e:
                 print(f"ERROR: {e}")
-
-        raise KeyboardInterrupt
 
 
 if __name__ == '__main__':
