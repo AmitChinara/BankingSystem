@@ -1,24 +1,15 @@
-import os.path
 import random
 from ConstantsClass import Constants
 import ExceptionClass as exp
 from HelperClass import Helper
+from FileHandlingClass import FileHandle
 
 
 class Bank:
 
     def __init__(self):
-        self.customer_info_filename = 'Data/customer.txt'
-        self.data = {}
+        self.data = FileHandle().getData()
         self.helper = Helper()
-
-    def loadData(self):
-        if os.path.exists(self.customer_info_filename):
-            with open(self.customer_info_filename, "r") as file:
-                content = file.readlines()
-                for value in content:
-                    account_number, name, balance = value.split(':')
-                    self.data[int(account_number)] = [name, float(balance)]
 
     def accountCreation(self):
         choice = input("Do you want to create the account?? (YES/NO) ").upper()
@@ -60,7 +51,7 @@ class Bank:
         if choice == 'YES':
             account_number = int(input("Enter your account number: "))
             if account_number in self.data:
-                balance = float(input("Enter the amount to deposit: "))
+                balance = float(input("Enter the amount to deposit: $"))
                 if balance <= 0:
                     raise exp.InvalidAmountException(balance)
                 self.data[account_number][1] += balance

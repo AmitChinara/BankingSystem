@@ -12,7 +12,6 @@ class Main:
         running = True
         helper = Helper()
         bank_obj = Bank()
-        bank_obj.loadData()
 
         while running:
             try:
@@ -26,7 +25,7 @@ class Main:
                 elif choice == '2':
                     account_number = bank_obj.deposit()
                     if account_number is not None:
-                        print(f"Successfully updated the balance. Account Number: {account_number}")
+                        print(f"Successfully updated the balance in the Account Number: {account_number}")
                 elif choice == '3':
                     pass
                 elif choice == '4':
