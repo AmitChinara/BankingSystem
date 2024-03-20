@@ -48,7 +48,6 @@ class Main:
                 print(f"ERROR: {e}")
 
 
-
 if __name__ == '__main__':
     main = Main()
     print("The application has started")
