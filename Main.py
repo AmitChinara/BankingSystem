@@ -34,7 +34,6 @@ class Main:
                     pass
                 elif choice == '6':
                     running = False
-                    print("Thank you for using the banking application")
                 else:
                     raise exp.InvalidChoiceException(choice)
             except exp.InvalidChoiceException as e:
@@ -46,6 +45,8 @@ class Main:
             except exp.InvalidAmountException as e:
                 print(f"ERROR: {e}")
 
+        raise KeyboardInterrupt
+
 
 if __name__ == '__main__':
     main = Main()
@@ -55,3 +56,7 @@ if __name__ == '__main__':
         print("Application has been stopped")
     except Exception as e:
         print(f'The application has been terminated with error: {e}')
+    except KeyboardInterrupt:
+        print('\n++===============================================++'
+              '\n||  Thank you for using the banking application  ||'
+              '\n++===============================================++')
