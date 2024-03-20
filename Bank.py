@@ -54,3 +54,21 @@ class Bank:
             self.helper.displayDetails(account_number, name, balance)
         else:
             raise exp.AccountNumberNotFoundException(account_number)
+
+    def deposit(self):
+        choice = input("Do you want to deposit?? (YES/NO) ").upper()
+        if choice == 'YES':
+            account_number = int(input("Enter your account number: "))
+            if account_number in self.data:
+                balance = float(input("Enter the amount to deposit: "))
+                if balance <= 0:
+                    raise exp.InvalidAmountException(balance)
+                self.data[account_number][1] += balance
+                return account_number
+            else:
+                raise exp.AccountNumberNotFoundException(account_number)
+        elif choice == 'NO':
+            pass
+        else:
+            raise exp.InvalidChoiceException(choice)
+

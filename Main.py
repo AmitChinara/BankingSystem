@@ -19,12 +19,14 @@ class Main:
                 choice = input("Enter your choice: ('0' to display options) ")
                 if choice == '0':
                     helper.displayMenu()
-                if choice == '1':
+                elif choice == '1':
                     account_number = bank_obj.accountCreation()
                     if account_number is not None:
                         print(f"Successfully created the account. Account Number: {account_number}")
                 elif choice == '2':
-                    pass
+                    account_number = bank_obj.deposit()
+                    if account_number is not None:
+                        print(f"Successfully updated the balance. Account Number: {account_number}")
                 elif choice == '3':
                     pass
                 elif choice == '4':
@@ -42,6 +44,9 @@ class Main:
                 print(f"Invalid number provided: {e}")
             except exp.AccountNumberNotFoundException as e:
                 print(f"ERROR: {e}")
+            except exp.InvalidAmountException as e:
+                print(f"ERROR: {e}")
+
 
 
 if __name__ == '__main__':
