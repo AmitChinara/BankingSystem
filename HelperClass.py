@@ -4,18 +4,18 @@ class Helper:
         pass
 
     def displayMenu(self):
-        print("++---------------|| WELCOME TO SONAL BANK ||-------------------++"
-              "||                   1. Account Creation                       ||"
-              "||                   2. Deposit                                ||"
-              "||                   3. Withdrawal                             ||"
-              "||                   4. Balance Inquiry                        ||"
-              "||                   5. Close Account                          ||"
-              "||                   6. Exit Application                       ||"
-              "++-------------------------------------------------------------++")
+        print("++---------------|| WELCOME TO SONAL BANK ||-------------------++\n"
+              "||                   1. Account Creation                       ||\n"
+              "||                   2. Deposit                                ||\n"
+              "||                   3. Withdrawal                             ||\n"
+              "||                   4. Balance Inquiry                        ||\n"
+              "||                   5. Close Account                          ||\n"
+              "||                   6. Exit Application                       ||\n"
+              "++-------------------------------------------------------------++\n")
 
     def displayDetails(self, account_number, name, balance):
-        print("+=================================================+"
-              f"  Account Number: {account_number}"
-              f"  Account Holder Name: {name}"
-              f"  Available Balance: ${balance:.2f}"
-              "+=================================================+")
+        print("+=================================================+\n"
+              f"  Account Number: {account_number}\n"
+              f"  Account Holder Name: {name}\n"
+              f"  Available Balance: ${balance:.2f}\n"
+              "+=================================================+\n")

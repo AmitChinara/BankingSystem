@@ -62,4 +62,34 @@ class Bank:
             pass
         else:
             raise exp.InvalidChoiceException(choice)
+    def withdrawal(self):
+        choice = input("Do you want to withdraw the money?? (YES/NO) ").upper()
+        if choice == 'YES':
+            account_number = int(input("Enter your account number: "))
+            if account_number in self.data:
+                balance = float(input("Enter the amount to withdraw: $"))
+                if balance <= 0:
+                    raise exp.InvalidAmountException(balance)
+                elif self.data[account_number][1] < balance:
+                    raise exp.InsufficientBalanceException(balance)
+                self.data[account_number][1] -= balance
+                return self.data[account_number][1]
+            else:
+                raise exp.AccountNumberNotFoundException(account_number)
+        elif choice == 'NO':
+            pass
+        else:
+            raise exp.InvalidChoiceException(choice)
 
+    def closeAccount(self):
+        choice = input("Do you want to close the account?? (YES/NO) ").upper()
+        if choice == 'YES':
+            account_number = int(input("Enter your account number: "))
+            if account_number in self.data:
+                return self.data.pop(account_number)
+            else:
+                raise exp.AccountNumberNotFoundException(account_number)
+        elif choice == 'NO':
+            pass
+        else:
+            raise exp.InvalidChoiceException(choice)

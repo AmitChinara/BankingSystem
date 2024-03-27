@@ -1,2 +1,2 @@
-123456:Sonal Shaw:56784
-874563:Amit Chinara:89
+123456:Sonal Shaw:56774.0
+874563:Amit Chinara:89.0

@@ -18,3 +18,16 @@ class FileHandle:
     def getData(self):
         self.__loadData()
         return self.data
+
+    def writeData(self, bank_obj):
+        data = bank_obj.data
+        content = ""
+
+        for account_number in data:
+            details = data[account_number]
+            content += f'{account_number}:{details[0]}:{details[1]}\n'
+
+        if os.path.exists(self.customer_info_filename):
+            with open(self.customer_info_filename, "w") as file:
+                 file.write(content)
+                 file.close()

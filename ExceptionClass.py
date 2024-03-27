@@ -16,3 +16,8 @@ class AccountNumberNotFoundException(Exception):
 class InvalidAmountException(Exception):
     def __init__(self, amount):
         super().__init__(f'Amount: {amount} is invalid.')
+
+
+class InsufficientBalanceException(Exception):
+    def __init__(self, amount):
+        super().__init__(f'Amount: {amount:.2f} is insufficient.')
